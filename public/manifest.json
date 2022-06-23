@@ -1,0 +1,8 @@
+{
+    "name": "Kanaksan App",
+    "short_name": "Kanaksan",
+    "description": "For Connecting people.",
+    "display": "standalone",
+    "orientation": "natural",
+    "start_url": "/"
+  }

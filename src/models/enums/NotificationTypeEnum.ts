@@ -1,0 +1,8 @@
+
+ enum NotificationTypeEnum {
+	
+	INFORMATION = "INFORMATION",
+	ACTION = "ACTION",
+	WARNING = "WARNING",
+	ADVERTISEMENT = "ADVERTISEMENT"
+ }

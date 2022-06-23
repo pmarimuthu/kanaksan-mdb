@@ -1,0 +1,486 @@
+{
+  "flag": {
+    "loadingActionCommand": "",
+    "isLoading": false,
+    "isFieldSaving": false
+  },
+  "visibility": [
+    {
+      "text": "Private",
+      "value": "PRIVATE"
+    },
+    {
+      "text": "Friendly",
+      "value": "FRIENDLY"
+    },
+    {
+      "text": "Public",
+      "value": "PUBLIC"
+    }
+  ],
+  "languages": [
+    {
+      "text": "ENGLISH",
+      "value": "ENGLISH"
+    },
+    {
+      "text": "TAMIL",
+      "value": "TAMIL"
+    }
+  ],
+  "advertisementOpts": [
+    {
+      "text": "Ad Free (Opt-Out)",
+      "value": false
+    },
+    {
+      "text": "Ok! to see Ad (Opt-In)",
+      "value": true
+    }
+  ],
+  "gender": [
+    {
+      "text": "Male",
+      "value": "MALE"
+    },
+    {
+      "text": "Female",
+      "value": "FEMALE"
+    }
+  ],
+  "profession": [
+    {
+      "text": "Teacher",
+      "value": "Teacher"
+    },
+    {
+      "text": "Doctor",
+      "value": "Doctor"
+    },
+    {
+      "text": "Agriculture",
+      "value": "Agriculture"
+    },
+    {
+      "text": "Business",
+      "value": "Business"
+    },
+    {
+      "text": "Student",
+      "value": "Student"
+    },
+    {
+      "text": "Other",
+      "value": "Other"
+    }
+  ],
+  "maritalStatus": [
+    {
+      "text": "Married",
+      "value": "MARRIED"
+    },
+    {
+      "text": "Divorced",
+      "value": "DIVORCED"
+    },
+    {
+      "text": "Widow",
+      "value": "WIDOW"
+    },
+    {
+      "text": "Single",
+      "value": "SINGLE"
+    }
+  ],
+  "religion": [
+    {
+      "text": "Hindu",
+      "value": "HINDU"
+    },
+    {
+      "text": "Others",
+      "value": "OTHERS"
+    }
+  ],
+  "caste": [
+    {
+      "text": "Vellalar",
+      "value": "VELLALAR"
+    },
+    {
+      "text": "Others",
+      "value": "OTHERS"
+    }
+  ],
+  "subcaste": [
+    {
+      "text": "Arunattu Vellalar",
+      "value": "ARUNATTU_VELLALAR"
+    },
+    {
+      "text": "OtherS",
+      "value": "OTHERS"
+    }
+  ],
+  "koththiram": [
+    {
+      "text": "01. ஆலத்துடையான்",
+      "value": "AALATHTHUDAIYAAN_01"
+    },
+    {
+      "text": "02. எதுமலுடையான்",
+      "value": "ETHUMALUDAYAAN_02"
+    },
+    {
+      "text": "03. களத்துடையான்",
+      "value": "KALATHTHUDAIYAAN_03"
+    },
+    {
+      "text": "04. களப்பான் (வளமுடையான்)",
+      "value": "K_VALAMUDAIYAAN_04"
+    },
+    {
+      "text": "05. காருடையான்",
+      "value": "KAARUDAIYAAN_05"
+    },
+    {
+      "text": "06. குணக்கொத்துடையான்",
+      "value": "GUNAKKOTHTHUDAIYAAN_06"
+    },
+    {
+      "text": "07. குருவலுடையான்",
+      "value": "KURUVALUDAIYAAN_07"
+    },
+    {
+      "text": "08. கூத்துடையான்",
+      "value": "KOOTHTHUDAIYAAN_08"
+    },
+    {
+      "text": "09. கொன்னக்குட்டையான்",
+      "value": "KONNAKKUTTAIYAAN_09"
+    },
+    {
+      "text": "10. கோட்டுடையான்",
+      "value": "KOATTUDAIYAAN_10"
+    },
+    {
+      "text": "11. கோனுடையான்",
+      "value": "KOONUDAIYAAN_11"
+    },
+    {
+      "text": "12. சமயமந்திரி",
+      "value": "SAMAYAMANTHIRI_12"
+    },
+    {
+      "text": "13. சனமங்கலத்துடையான்",
+      "value": "SANAMANGALATHTHUDAIYAAN_13"
+    },
+    {
+      "text": "14. சாத்துடையான்",
+      "value": "SAATHTHUDAIYAAN_14"
+    },
+    {
+      "text": "15. சிறுதலுடையான்",
+      "value": "SIRUTHALUDAIYAAN_15"
+    },
+    {
+      "text": "16. திருச்சங்குடையான்",
+      "value": "THIRICHCHANGUDAIYAAN_16"
+    },
+    {
+      "text": "17. தெத்தமங்கலத்துடையான்",
+      "value": "THETHTHU_MANGALATHTHUDAIYAAN_17"
+    },
+    {
+      "text": "18. தேவங்குடையான்",
+      "value": "THEVANGUDAIYAAN_18"
+    },
+    {
+      "text": "19. நத்தமுடையான்",
+      "value": "NATHTHAMUDAIYAAN_19"
+    },
+    {
+      "text": "20. நல்லுடையான்",
+      "value": "NALLUDAIYAAN_20"
+    },
+    {
+      "text": "21. நிம்மலுடையான்",
+      "value": "NIMMALUDAIYAAN_21"
+    },
+    {
+      "text": "22. பனையடியான்",
+      "value": "PANAIYADIYAAN_22"
+    },
+    {
+      "text": "23. பாவலுடையான்",
+      "value": "PAAVALUDAIYAAN_23"
+    },
+    {
+      "text": "24. பூண்டிலுடையான்",
+      "value": "POONDILUDAIYAAN_24"
+    },
+    {
+      "text": "25. மருதுடையான்",
+      "value": "MARUTHUDAIYAAN_25"
+    },
+    {
+      "text": "26. மாத்துடையான்",
+      "value": "MAATHTHUDAIYAAN_26"
+    },
+    {
+      "text": "27. மிரட்டுடையான் (குருவலுடையான்)",
+      "value": "KURUVALUDAIYAAN_27"
+    },
+    {
+      "text": "28. முருக்கத்துடையான்",
+      "value": "MURUKKATHTHUDAIYAAN_28"
+    },
+    {
+      "text": "29. வளவுடையான்",
+      "value": "VALAMUDAIYAAN_29"
+    },
+    {
+      "text": "30. வில்வராயன்",
+      "value": "VILVARAAYAN"
+    },
+    {
+      "text": "31. வெண்ணாவலுடையான்",
+      "value": "VENNAAVALUDAIYAAN_31"
+    },
+    {
+      "text": "32. சக்கரவர்த்தி",
+      "value": "CHAKRAVARTHI_32"
+    }
+  ],
+  "raasi": [
+    {
+      "text": "Aries_01",
+      "value": "Aries_01"
+    },
+    {
+      "text": "Taurus_02",
+      "value": "Taurus_02"
+    },
+    {
+      "text": "Gemini_03",
+      "value": "Gemini_03"
+    },
+    {
+      "text": "Cancer_04",
+      "value": "Cancer_04"
+    },
+    {
+      "text": "Leo_05",
+      "value": "Leo_05"
+    },
+    {
+      "text": "Virgo_06",
+      "value": "Virgo_06"
+    },
+    {
+      "text": "Libra_07",
+      "value": "Libra_07"
+    },
+    {
+      "text": "Scorpio_08",
+      "value": "Scorpio_08"
+    },
+    {
+      "text": "Sagittarius_09",
+      "value": "Sagittarius_09"
+    },
+    {
+      "text": "Capricorn_10",
+      "value": "Capricorn_10"
+    },
+    {
+      "text": "Aquarius_11",
+      "value": "Aquarius_11"
+    },
+    {
+      "text": "Pisces_12",
+      "value": "Pisces_12"
+    }
+  ],
+  "natchaththiram": [
+    {
+      "value": "Ashwini_01",
+      "text": "01. Ashwini (அஸ்வினி)"
+    },
+    {
+      "value": "02. Bharani",
+      "text": "02. Bharani (பரணி)"
+    },
+    {
+      "value": "Krittika_03",
+      "text": "03. Krittika (கார்த்திகை)"
+    },
+    {
+      "value": "Rohini_04",
+      "text": "04. Rohini (ரோகிணி)"
+    },
+    {
+      "value": "Mrigashīra_05",
+      "text": "05. Mrigashīra (மிருகசீரிடம்)"
+    },
+    {
+      "value": "Ardra_06",
+      "text": "06. Ardra (திருவாதிரை)"
+    },
+    {
+      "value": "Punarvasu_07",
+      "text": "07. Punarvasu (புனர்பூசம்)"
+    },
+    {
+      "value": "PushyaTishya_08",
+      "text": "08. PushyaTishya (பூசம்)"
+    },
+    {
+      "value": "Ashleshā_09",
+      "text": "09. Ashleshā (ஆயில்யம்)"
+    },
+    {
+      "value": "Maghā_10",
+      "text": "10. Maghā (மகம்)"
+    },
+    {
+      "value": "PūrvaPhalgunī_11",
+      "text": "11. Pūrva Phalgunī (பூரம்)"
+    },
+    {
+      "value": "Uttara_Phalgunī_12",
+      "text": "12. Uttara Phalgunī (உத்தரம்)"
+    },
+    {
+      "value": "Hasta_13",
+      "text": "13. Hasta (அஸ்தம்)"
+    },
+    {
+      "value": "Chitra_14",
+      "text": "14. Chitra (சித்திரை)"
+    },
+    {
+      "value": "Swāti_15",
+      "text": "15. Swāti (சுவாதி)"
+    },
+    {
+      "value": "Visakha_16",
+      "text": "16. Visakha (விசாகம்)"
+    },
+    {
+      "value": "Anuradha_17",
+      "text": "17. Anuradha (அனுஷம்)"
+    },
+    {
+      "value": "Jyeshtha_18",
+      "text": "18. Jyeshtha (கேட்டை)"
+    },
+    {
+      "value": "Mula_19",
+      "text": "19. Mula (மூலம்)"
+    },
+    {
+      "value": "PurvaAshadha_20",
+      "text": "20. Purva Ashadha (பூராடம்)"
+    },
+    {
+      "value": "UttaraAshadha_21",
+      "text": "21. Uttara Ashadha (உத்திராடம்)"
+    },
+    {
+      "value": "Shravana_22",
+      "text": "22. Shravana (திருவோணம்)"
+    },
+    {
+      "value": "Dhanishta_23",
+      "text": "23. Dhanishta (அவிட்டம்)"
+    },
+    {
+      "value": "Shatabhisha_24",
+      "text": "24. Shatabhisha (சதயம்)"
+    },
+    {
+      "value": "Purva_Bhadrapada_25",
+      "text": "25. Purva Bhadrapada (பூரட்டாதி)"
+    },
+    {
+      "value": "UttaraBhadrapada_26",
+      "text": "26. Uttara Bhadrapada (உத்திரட்டாதி)"
+    },
+    {
+      "value": "Revati_27",
+      "text": "27. Revati (ரேவதி)"
+    }
+  ],
+  "familyHeadIds": [],
+  "familyMemberTitle": [
+    {
+      "value": "HEAD",
+      "text": "Head",
+      "key": "HEAD"
+    },
+    {
+      "value": "SPOUSE",
+      "text": "Spouse",
+      "key": "SPOUSE"
+    },
+    {
+      "value": "SON",
+      "text": "Son (Unmarried)",
+      "key": "SON"
+    },
+    {
+      "value": "DAUGHTER",
+      "text": "Daughter (Unmarried)",
+      "key": "DAUGHTER"
+    }
+  ],
+  "liveStatus": [
+    {
+      "value": "ALIVE",
+      "text": "Alive",
+      "key": "ALIVE"
+    },
+    {
+      "value": "EXPIRED",
+      "text": "Expired",
+      "key": "EXPIRED"
+    },
+    {
+      "value": "UNKNOWN",
+      "text": "Unknown",
+      "key": "UNKNOWN"
+    }
+  ],
+  "roleMap": [
+    {
+      "value": "ADMIN",
+      "text": "Admin",
+      "key": "ADMIN"
+    },
+    {
+      "value": "ANALYST",
+      "text": "Analyst",
+      "key": "ANALYST"
+    },
+    {
+      "value": "USER",
+      "text": "User",
+      "key": "USER"
+    }
+  ],
+  "userAddressType": [
+    {
+      "text": "Native Address",
+      "value": "NATIVE"
+    },
+    {
+      "text": "Living Address",
+      "value": "LIVING"
+    },
+    {
+      "text": "Office/Business Address",
+      "value": "OFFICE"
+    }
+  ]
+}

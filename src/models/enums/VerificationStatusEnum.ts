@@ -1,0 +1,8 @@
+
+ enum VerificationStatusEnum {
+	
+	NOT_VERIFIED = "NOT_VERIFIED",
+	VERIFIED_NOT_OK = "VERIFIED_NOT_OK",
+	VERIFIED_OK = "VERIFIED_OK"
+ }
+ 

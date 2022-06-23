@@ -1,0 +1,7 @@
+
+ enum SubcasteEnum {
+	
+	ARUNATTU_VELLALAR = "ARUNATTU_VELLALAR",
+	OTHERS = "OTHERS"
+ }
+ 
