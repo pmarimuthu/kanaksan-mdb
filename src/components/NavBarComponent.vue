@@ -1,76 +1,65 @@
 <template>
-  <nav class="navbar animated fadeInLeft is-fixed-top">
-    <div class="navbar-brand">
-      <a class="navbar-item" @click="onLogo">
-        <img
-          src="/assets/logo.svg"
-          alt="Kanaksan Logo"
-          style="min-height: 4rem; max-height: 4rem"
-        />
-      </a>
-      <div
-        class="navbar-burger"
-        @click="showNav = !showNav"
-        :class="{ 'is-active': showNav }"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="navbar-menu bg-color" :class="{ 'is-active': showNav }">
-      <div class="navbar-end">
-        <a
-          v-show="!hasUser"
-          class="navbar-item"
-          v-on:click="onNavBarItem('/login')"
-          >Login</a
-        >
-        <a
-          v-show="hasUser"
-          class="navbar-item"
-          v-on:click="onNavBarItem('/logout')"
-          >Logout</a
-        >
-        <a
-          v-show="hasUser"
-          class="navbar-item"
-          v-on:click="onNavBarItem('/profile')"
-          ><i class="fas fa-th"></i>&nbsp;Profile</a
-        >
-        <a
-          v-show="hasUser"
-          class="navbar-item"
-          v-on:click="onNavBarItem('/profiles')"
-          ><i class="fas fa-sitemap"></i>&nbsp;Kanaksans</a
-        >
-        <a
-          v-show="hasUser"
-          class="navbar-item"
-          v-on:click="onNavBarItem('/settings')"
-          ><i class="fas fa-sliders-h"></i>&nbsp;Settings</a
-        >
+  <MDBNavbar expand="lg" light bg="light" container>
+    <MDBNavbarBrand href="#" @click="onLogo">
+      <img src="/assets/logo.svg" alt="Kanaksan Logo" style="min-height: 4rem; max-height: 4rem" />
+    </MDBNavbarBrand>
+    <MDBNavbarToggler @click="collapse1 = !collapse1" target="#navbarSupportedContent"></MDBNavbarToggler>
+    <MDBCollapse v-model="collapse1" id="navbarSupportedContent">
+      <MDBNavbarNav class="mb-2 mb-lg-0">
+        <MDBNavbarItem to="#" active v-show="!hasUser" @click="onNavBarItem('/login')">
+          Login
+        </MDBNavbarItem>
+        <MDBNavbarItem to="#" v-if="hasUser" @click="onNavBarItem('/account')">
+          Account
+        </MDBNavbarItem>
+        <MDBNavbarItem to="#" v-if="hasUser" @click="onNavBarItem('/profile')">
+          My Profile
+        </MDBNavbarItem>
+        <MDBNavbarItem to="#" v-if="hasUser" @click="onNavBarItem('/profiles')">
+          Profiles
+        </MDBNavbarItem>
 
-        <a class="navbar-item" v-on:click="onNavBarItem('/blog')">
-          <span class="material-icons">rss_feed</span>&nbsp;Blog
-        </a>
+        <MDBNavbarItem v-if="hasUser" >
+          <MDBDropdown class="nav-item" v-model="dropdown1">
+            <MDBDropdownToggle tag="a" class="nav-link" @click="dropdown1 = !dropdown1;">
+              Menu
+            </MDBDropdownToggle>
 
-        <label
-          class="navbar-item is-clickable"
-          v-on:click="onNavBarItem('/about')"
-        >
+            <MDBDropdownMenu aria-labelledby="dropdownMenuButton">
+              <MDBDropdownItem to="#" @click="onNavBarItem('/settings')">Settings</MDBDropdownItem>
+              <MDBDropdownItem href="#">Create Proxy User</MDBDropdownItem>
+            </MDBDropdownMenu>
+
+          </MDBDropdown>
+        </MDBNavbarItem>
+
+        <MDBNavbarItem to="#" @click="onNavBarItem('/blog')">
+          Blog
+        </MDBNavbarItem>
+        <MDBNavbarItem to="#" @click="onNavBarItem('/about')">
           About
-        </label>
-        <label v-show="!hasUser" class="navbar-item">
-          <span :class="[batteryLevelClass]"></span>
-          {{ "&nbsp;" + Math.round(batteryLevel) }}%
-        </label>
-      </div>
-    </div>
-  </nav>
+        </MDBNavbarItem>
+      </MDBNavbarNav>
+
+      <!-- Search form -->
+      <form class="d-flex input-group w-auto">
+        <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
+        <MDBBtn outline="primary">
+          Search
+        </MDBBtn>
+      </form>
+
+    </MDBCollapse>
+  </MDBNavbar>
+
 </template>
 
 <script setup lang='ts'>
+import { MDBBtn } from 'mdb-vue-ui-kit'
+import { MDBNavbar, MDBNavbarToggler, MDBNavbarBrand, MDBNavbarNav, MDBNavbarItem } from 'mdb-vue-ui-kit'
+import { MDBCollapse } from 'mdb-vue-ui-kit'
+import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from 'mdb-vue-ui-kit'
+
 import { computed, ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useKanaksanStore } from '../stores/kanaksanStore'
@@ -78,9 +67,8 @@ import { useKanaksanStore } from '../stores/kanaksanStore'
 const router = useRouter();
 const kanaksanStore = useKanaksanStore()
 
-const batteryLevel = ref(0);
-const showNav = ref(false);
-const batteryLevelClass = ref("fas fa-battery-empty");
+const collapse1 = ref(false);
+const dropdown1 = ref(false);
 
 const hasUser = computed(() => {
   if (kanaksanStore.authenticatedUser) return true;
@@ -94,38 +82,29 @@ function onLogo() {
   })
 }
 
-function checkBattery() {
-  navigator.getBattery().then((manager) => {
-    manager.addEventListener("levelchange", () => {
-      batteryLevel.value = Number(manager.level * 100)
-
-      const n = Number(batteryLevel.value)
-      if (Number(n) < 25) batteryLevelClass.value = "fas fa-battery-empty"
-      else if (Number(n) < 50)
-        batteryLevelClass.value = "fas fa-battery-quarter"
-      else if (Number(n) < 75) batteryLevelClass.value = "fas fa-battery-half"
-      else batteryLevelClass.value = "fas fa-battery-full"
-    })
-  })
-}
-
-function onNavBarItem(itemName) {
+function onNavBarItem(itemName: string) {
   switch (itemName) {
-    case '/logout':
-      if (!confirm("Are you sure! you want to Logout."))
-        return;
-        
+    case '/account':
+      if (kanaksanStore.authenticatedUser) {
+        kanaksanStore.dialog.logout.isShow = true
+        router.push('/account')
+      }
+      else {
+        router.push('/')
+      }
+      break;
+
     case '/profile':
-      if(kanaksanStore.authenticatedUser) {
+      if (kanaksanStore.authenticatedUser) {
         kanaksanStore.setSelectedUser(kanaksanStore.authenticatedUser)
-        router.push('/profile')        
+        router.push('/profile')
       }
       else {
         kanaksanStore.$reset()
         router.push('/')
       }
       break
-  
+
     default:
       break
   }
@@ -133,8 +112,8 @@ function onNavBarItem(itemName) {
 }
 
 onMounted(() => {
-  checkBattery()
 })
 </script>
 
-<style></style>
+<style>
+</style>

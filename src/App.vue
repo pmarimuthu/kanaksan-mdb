@@ -89,4 +89,7 @@ const fetchUserIds = () => {
 </script>
 
 <style>
+#app {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
 </style>

@@ -21,7 +21,20 @@ export const useKanaksanStore = defineStore(
             levelMinusOneUsers: [],
             levelZeroUsers: [],
             levelOneUsers: [],
-            levelTwoUsers: [],    
+            levelTwoUsers: [],
+
+            dialog: {
+                logout: {
+                    isShow: false,
+                    type: '',
+                    title: '',
+                    label: {
+                        ok: 'Ok',
+                        cancel: 'Cancel'
+                    },
+                    button: []
+                }
+            }
         }),
         actions: {
             setIsLoading(isLoading) {

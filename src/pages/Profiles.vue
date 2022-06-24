@@ -16,17 +16,14 @@ import NavBarComponent from "../components/NavBarComponent.vue"
 
 const kanaksanStore = useKanaksanStore()
 const router = useRouter()
+
 onMounted(() => {
-  checkUser()
+  if(kanaksanStore.authenticatedUser) {
+  }
+  else {
+    router.push('/')
+  }
 })
-
-function checkUser() {
-  if (kanaksanStore.authenticatedUser && kanaksanStore.authenticatedUser.id) 
-    return
-
-  kanaksanStore.$reset()
-  router.push({ path: "/" })
-}
 </script>
 
 <style scoped></style>

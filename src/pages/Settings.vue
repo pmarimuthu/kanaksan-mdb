@@ -17,14 +17,13 @@ const router = useRouter()
 const kanaksanStore = useKanaksanStore()
 
 onMounted(() => {
-  checkUser()
+  if(kanaksanStore.authenticatedUser) {
+  }
+  else {
+    router.push('/')
+  }
 })
 
-function checkUser() {
-  if (kanaksanStore.authenticatedUser && kanaksanStore.authenticatedUser.id) return true
-  this.$store.dispatch('doReset')
-  router.push({ path: "/" })
-}
 </script>
 
 <style scoped></style>

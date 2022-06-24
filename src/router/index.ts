@@ -17,9 +17,9 @@ const routes = [
     component: () => import('../pages/Login.vue'),
   },
   {
-    path: '/logout',
-    name: 'Logout',
-    component: () => import('../pages/Logout.vue'),
+    path: '/account',
+    name: 'Account',
+    component: () => import('../pages/Account.vue'),
   },
   {
     path: '/profile',

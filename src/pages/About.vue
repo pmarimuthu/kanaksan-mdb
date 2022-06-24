@@ -1,6 +1,6 @@
 <template>
   <nav-bar-component />
-    <about-component />
+  <about-component />
   <footer-component />
 </template>
 

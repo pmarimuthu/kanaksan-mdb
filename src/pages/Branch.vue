@@ -15,22 +15,16 @@ import FooterComponent from "../components/FooterComponent.vue"
 import BranchComponent from "../components/BranchComponent.vue"
 import NavBarComponent from "../components/NavBarComponent.vue"
 
-import UserBean from "../models/user-bean";
-
 const kanaksanStore = useKanaksanStore()
 const router = useRouter()
 
 onMounted(() => {
-  checkUser()
+  if(kanaksanStore.authenticatedUser) {
+  }
+  else {
+    router.push('/')
+  }
 })
-
-function checkUser() {
-  if (kanaksanStore.authenticatedUser && kanaksanStore.authenticatedUser.id) 
-    return
-
-  kanaksanStore.$reset()
-  router.push({ path: "/" })
-}
 
 </script>
 
